@@ -1,16 +1,47 @@
+//pyramid steps - recursive solutin:
+// function pyramid(n, orig = n){
+
+//     if (n === 0){
+//         return;
+//     }
+
+//     console.log("A".repeat(orig-n);
+//     pyramid(n-1, orig)
+// }
+
+// pyramid(3);
+
+
+//pyramid steps, non recursive, iterative solution.
+
+// function pyramid(n){
+
+//     for (let i = 1; i <= n; i++){
+//         console.log(" ".repeat(n-i)+"#".repeat((i == 1 ? 1 : 1+(i-1)*2))+" ".repeat(n-i));
+//     }
+
+// }
+
+// pyramid(7);
+// "  #  "  1,2,X,4,5, 3-row# = spaces
+// " ### "  1,X,X,X,5  3-row# = spaces
+// "#####"  X,X,X,X,X  3-row# = spaces
+
+// *************************
+
 //recursive steps solution:
-function steps(n, orig = n){
+// function steps(n, orig = n){
 
-    if (n <= 0){
-        return;
-    }
-    console.log("#".repeat(orig-n+1)+" ".repeat(n-1))
+//     if (n <= 0){
+//         return;
+//     }
+//     console.log("#".repeat(orig-n+1)+" ".repeat(n-1))
 
-    steps(n-1, orig)
+//     steps(n-1, orig)
 
-}
+// }
 
-steps(5);
+// steps(5);
 
 // recursion attempt:
 // function count(n){
