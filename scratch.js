@@ -1,11 +1,25 @@
-// recursion attempt:
-function count(n){
-    console.log(n);
-    if (n > 0){
-        count(n-1)}
+//recursive steps solution:
+function steps(n, orig = n){
+
+    if (n <= 0){
+        return;
+    }
+    console.log("#".repeat(orig-n+1)+" ".repeat(n-1))
+
+    steps(n-1, orig)
+
 }
 
-count(5);
+steps(5);
+
+// recursion attempt:
+// function count(n){
+//     console.log(n);
+//     if (n > 0){
+//         count(n-1)}
+// }
+
+// count(5);
 
 // *************************
 
