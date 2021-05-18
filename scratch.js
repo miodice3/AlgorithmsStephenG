@@ -1,16 +1,24 @@
 //pyramid steps - recursive solutin:
-// function pyramid(n, orig = n){
+function pyramid(n, orig = n){
 
-//     if (n === 0){
-//         return;
-//     }
+    if (n === 0){
+        return;
+    }
 
-//     console.log("A".repeat(orig-n);
-//     pyramid(n-1, orig)
-// }
+    if (n === 1){
+        return console.log("#".repeat((1 + (orig-1)*2)))
+    }
+    let returnString = "";
+    returnString = " ".repeat(n-1)+"#".repeat((n==orig ? 1 : 1 + (orig-n)*2))+" ".repeat(n-1);
+    console.log(returnString)
 
-// pyramid(3);
+    pyramid(n-1, orig)
+}
 
+pyramid(5);
+// "  #  "  1,2,X,4,5, 3-row# = spaces
+// " ### "  1,X,X,X,5  3-row# = spaces
+// "#####"  X,X,X,X,X  3-row# = spaces
 
 //pyramid steps, non recursive, iterative solution.
 
