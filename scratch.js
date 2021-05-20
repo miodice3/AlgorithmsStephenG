@@ -1,21 +1,42 @@
-//pyramid steps - recursive solutin:
-function pyramid(n, orig = n){
+function vowels(str){
+    let vowels = {"a": true,"e": true,"i": true,"o": true,"u": true}
 
-    if (n === 0){
-        return;
-    }
+    let count = 0;
 
-    if (n === 1){
-        return console.log("#".repeat((1 + (orig-1)*2)))
-    }
-    let returnString = "";
-    returnString = " ".repeat(n-1)+"#".repeat((n==orig ? 1 : 1 + (orig-n)*2))+" ".repeat(n-1);
-    console.log(returnString)
+    str.split("").forEach(c=>{
+        if (vowels[c]){
+            count = count + 1
+        }
+    })
 
-    pyramid(n-1, orig)
+    // console.log(count);
+    return count;
+
 }
 
-pyramid(5);
+vowels("aeiou")
+//write a function that returns the number of vowels used in a string.
+
+// *************************
+//pyramid steps - recursive solutin:
+// function pyramid(n, orig = n){
+
+//     if (n === 0){
+//         return;
+//     }
+
+//     if (n === 1){
+//         return console.log("#".repeat((1 + (orig-1)*2)))
+//     }
+//     let returnString = "";
+//     returnString = " ".repeat(n-1)+"#".repeat((n==orig ? 1 : 1 + (orig-n)*2))+" ".repeat(n-1);
+//     console.log(returnString)
+
+//     pyramid(n-1, orig)
+// }
+
+// pyramid(5);
+
 // "  #  "  1,2,X,4,5, 3-row# = spaces
 // " ### "  1,X,X,X,5  3-row# = spaces
 // "#####"  X,X,X,X,X  3-row# = spaces
