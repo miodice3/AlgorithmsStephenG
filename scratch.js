@@ -1,20 +1,35 @@
+// function vowels(str){
+//     let vowels = {"a": true,"e": true,"i": true,"o": true,"u": true}
+
+//     let count = 0;
+
+//     str.toLowerCase().split("").forEach(c=>{
+//         if (vowels[c]){
+//             count = count + 1
+//         }
+//     })
+
+//     console.log(count);
+//     return count;
+
+// }
+
 function vowels(str){
-    let vowels = {"a": true,"e": true,"i": true,"o": true,"u": true}
 
-    let count = 0;
+    let counter = 0;
 
-    str.split("").forEach(c=>{
-        if (vowels[c]){
-            count = count + 1
+    let variablesToCheck = "aeiou"
+
+    str.toLowerCase().split("").forEach(n=>{
+        if (variablesToCheck.includes(n)){
+            counter += 1
         }
     })
-
-    // console.log(count);
-    return count;
-
+    // console.log(counter)
+    return counter;
 }
 
-vowels("aeiou")
+vowels("HELLOS")
 //write a function that returns the number of vowels used in a string.
 
 // *************************
